@@ -34,10 +34,10 @@ func AtomicAddInt() {
 
 			atomic.AddInt64(&sum, i)
 		}()
-
-		wg.Wait()
-		fmt.Printf("  AtomicAddInt: final sum %v\n", sum)
 	}
+
+	wg.Wait()
+	fmt.Printf("  AtomicAddInt: final sum %v\n", sum)
 }
 
 // readIntFromFile given filename, opens a file and reads an int
