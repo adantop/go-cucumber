@@ -3,6 +3,7 @@ package concurrency
 import (
 	"fmt"
 	"io/ioutil"
+	"os"
 	"strconv"
 	"sync"
 	"sync/atomic"
@@ -15,7 +16,7 @@ func AtomicAddInt() {
 	var wg sync.WaitGroup
 	var sum int64
 
-	const root = "/home/pi/Workspace/cucumber/testdata/"
+	root := os.Getenv("HOME") + "/Workspace/cucumber/testdata/"
 	files := []string{"atomic-0.txt", "atomic-1.txt", "atomic-2.txt"}
 
 	for _, f := range files {
