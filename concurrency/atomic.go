@@ -13,6 +13,8 @@ import (
 // we are reading an integer from few files with pattern atomic-*.txt
 // and printing the sum at the end
 func AtomicAddInt() {
+	fmt.Println("  AtomicAddInt: start")
+
 	var wg sync.WaitGroup
 	var sum int64
 
