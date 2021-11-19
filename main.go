@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/adantop/cucumber/concurrency"
 	"time"
+
+	"github.com/adantop/cucumber/concurrency"
 )
 
 func main() {
@@ -12,7 +13,8 @@ func main() {
 
 	//concurrency.BasicConcurrency()
 	//concurrency.AtomicAddInt()
-	concurrency.MutexConcurrency()
+	//concurrency.MutexConcurrency()
+	concurrency.Channels()
 
 	defer fmt.Printf("main: took %v\n", time.Since(start))
 }
